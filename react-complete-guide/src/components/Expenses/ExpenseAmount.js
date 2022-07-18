@@ -1,6 +1,6 @@
 import "./ExpenseAmount.css"
 
-function ExpenseAmount(props) {
+const ExpenseAmount = (props) => {
     return (<div>
         <h5>Amount</h5>
         <div className="amount amount-yellow">

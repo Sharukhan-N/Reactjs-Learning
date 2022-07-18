@@ -9,7 +9,7 @@ const expenses = [
   { id: 5, title: "Shopping", date: new Date(2022, 6, 5), tag: "Family", amount: 5 }
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       <Expenses expenses={expenses}></Expenses>
