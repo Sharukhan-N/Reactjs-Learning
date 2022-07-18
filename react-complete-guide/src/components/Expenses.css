@@ -1,0 +1,5 @@
+.card_expenses {
+    background: #929191;
+    margin-bottom: 10px;
+    width: clamp(40rem, calc(20rem + 2vw), 22rem);
+}

@@ -1,0 +1,12 @@
+.amount-yellow {
+    background: #fffffffa;
+    background: linear-gradient(to left, #fffffffa, #eeeeb0fa);
+    color: #000000;
+}
+
+.amount {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 10em;
+    font-size: 1rem;
+}
