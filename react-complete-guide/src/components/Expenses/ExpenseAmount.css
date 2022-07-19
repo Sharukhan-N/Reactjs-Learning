@@ -1,7 +1,7 @@
 .amount-yellow {
     background: #fffffffa;
-    background: linear-gradient(to left, #fffffffa, #eeeeb0fa);
-    color: #000000;
+    background: linear-gradient(to left, #fffffffa, #000000fa);
+    color: #ffffff;
 }
 
 .amount {

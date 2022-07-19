@@ -1,4 +1,4 @@
-.card_expenses {
+.form_card_expenses {
     background: #efe4e4;
     margin-bottom: 10px;
     width: clamp(40rem, calc(20rem + 2vw), 22rem);

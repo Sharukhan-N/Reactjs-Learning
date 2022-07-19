@@ -1,0 +1,28 @@
+.form_expense {
+    margin: auto;
+    margin-bottom: 10px;
+    width: clamp(30rem, calc(20rem + 2vw), 22rem);
+    background: #7f7fd5;
+    background: linear-gradient(to right, #6194b2, #ffffff, #ffffff);
+}
+
+.form__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.submit {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+}
+
+
+.submit-black {
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #000000, #000000);
+    color: #fafafa;
+}

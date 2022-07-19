@@ -13,8 +13,6 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    /* background: #7f7fd5;
-    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 }
 
 .container {
@@ -37,7 +35,8 @@ img {
     margin-bottom: 10px;
     width: clamp(30rem, calc(20rem + 2vw), 22rem);
     background: #7f7fd5;
-    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+    background: linear-gradient(to right, #6194b2, #ffffff, #ffffff);
+    /* background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 }
 
 .card__body {
