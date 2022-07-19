@@ -20,36 +20,64 @@ const ExpenseForm = () => {
 
     const titleChangeHandler = (event) => {
         // setTitle(event.target.value);
-        setUserInput({
-            ...userInput,
-            title: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     title: event.target.value
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                title: event.target.value
+            }
+
         });
         console.log(event.target.value);
     }
 
     const typeChangeHandler = (event) => {
         // setType(event.target.value);
-        setUserInput({
-            ...userInput,
-            type: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     type: event.target.value
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                type: event.target.value
+            }
+
         });
         console.log(event.target.value);
     }
 
     const dateChangeHandler = (event) => {
         // setDate(event.target.value);
-        setUserInput({
-            ...userInput,
-            date: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     date: event.target.value
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                date: event.target.value
+            }
+
         });
         console.log(event.target.value);
     }
 
     const numberChangeHandler = (event) => {
         // setAmount(event.target.value);
-        setUserInput({
-            ...userInput,
-            amount: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     amount: event.target.value
+        // });
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                amount: event.target.value
+            }
+
         });
         console.log(event.target.value);
     }
