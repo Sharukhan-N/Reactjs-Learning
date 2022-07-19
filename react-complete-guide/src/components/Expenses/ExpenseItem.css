@@ -55,6 +55,13 @@ img {
     font-size: .75rem;
 }
 
+.tag_end {
+    align-self: flex-end;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+}
+
 .tag+.tag {
     margin-left: .5em;
 }
@@ -62,6 +69,12 @@ img {
 .tag-blue {
     background: #56CCF2;
     background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+}
+
+.tag-black {
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #000000, #000000);
     color: #fafafa;
 }
 
