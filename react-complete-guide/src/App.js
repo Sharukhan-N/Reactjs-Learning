@@ -1,5 +1,7 @@
+import React from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense"
+
 
 const expenses = [
   { id: 1, title: "Health Insurance", date: new Date(2022, 6, 1), tag: "Insurance", amount: 56.04 },
@@ -9,10 +11,17 @@ const expenses = [
   { id: 5, title: "Shopping", date: new Date(2022, 6, 5), tag: "Family", amount: 5 }
 ];
 
+
 const App = () => {
+
+  const addExpense = (expense) => {
+    console.log(expense);
+  }
+
+
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onExpenseAdded={addExpense}></NewExpense>
       <Expenses expenses={expenses}></Expenses>
     </div >
   );

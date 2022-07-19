@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./ExpenseForm.css"
 import Card from "../UI/Card";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const [title, setTitle] = useState('');
     const [type, setType] = useState('');
@@ -91,7 +91,7 @@ const ExpenseForm = () => {
             date: new Date(date),
             amount: amount
         }
-        console.log(expenseObject);
+        props.onFormSubmit(expenseObject);
         clearHandler();
     }
 
