@@ -5,86 +5,98 @@ import Card from "../UI/Card";
 
 const ExpenseForm = () => {
 
-    // const [title, setTitle] = useState('');
-    // const [type, setType] = useState('');
-    // const [date, setDate] = useState('');
-    // const [amouunt, setAmount] = useState('');
+    const [title, setTitle] = useState('');
+    const [type, setType] = useState('');
+    const [date, setDate] = useState('');
+    const [amouunt, setAmount] = useState('');
 
 
-    const [userInput, setUserInput] = useState({
-        title: '',
-        type: '',
-        date: '',
-        amount: ''
-    });
+    // const [userInput, setUserInput] = useState({
+    //     title: '',
+    //     type: '',
+    //     date: '',
+    //     amount: ''
+    // });
 
     const titleChangeHandler = (event) => {
-        // setTitle(event.target.value);
+        setTitle(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     title: event.target.value
         // });
-        setUserInput((prevState) => {
-            return {
-                ...prevState,
-                title: event.target.value
-            }
+        // setUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         title: event.target.value
+        //     }
 
-        });
-        console.log(event.target.value);
+        // });
+        // console.log(event.target.value);
     }
 
     const typeChangeHandler = (event) => {
-        // setType(event.target.value);
+        setType(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     type: event.target.value
         // });
-        setUserInput((prevState) => {
-            return {
-                ...prevState,
-                type: event.target.value
-            }
+        // setUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         type: event.target.value
+        //     }
 
-        });
-        console.log(event.target.value);
+        // });
+        // console.log(event.target.value);
     }
 
     const dateChangeHandler = (event) => {
-        // setDate(event.target.value);
+        setDate(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     date: event.target.value
         // });
-        setUserInput((prevState) => {
-            return {
-                ...prevState,
-                date: event.target.value
-            }
+        // setUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         date: event.target.value
+        //     }
 
-        });
-        console.log(event.target.value);
+        // });
+        // console.log(event.target.value);
     }
 
     const numberChangeHandler = (event) => {
-        // setAmount(event.target.value);
+        setAmount(event.target.value);
         // setUserInput({
         //     ...userInput,
         //     amount: event.target.value
         // });
-        setUserInput((prevState) => {
-            return {
-                ...prevState,
-                amount: event.target.value
-            }
+        // setUserInput((prevState) => {
+        //     return {
+        //         ...prevState,
+        //         amount: event.target.value
+        //     }
 
-        });
-        console.log(event.target.value);
+        // });
+        // console.log(event.target.value);
+    }
+
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+        const expenseObject = {
+            title: title,
+            tag: type,
+            date: new Date(date),
+            amount: amouunt
+        }
+        console.log(expenseObject);
     }
 
     return (
         <Card className="form_expense">
-            <form className="form__body">
+            <form className="form__body" onSubmit={submitHandler}>
                 <label><h4>Title</h4></label>
                 <input type="text" onChange={titleChangeHandler} />
                 <label><h4>Type</h4></label>
