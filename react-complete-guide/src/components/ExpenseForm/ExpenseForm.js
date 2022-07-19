@@ -8,7 +8,7 @@ const ExpenseForm = () => {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('');
     const [date, setDate] = useState('');
-    const [amouunt, setAmount] = useState('');
+    const [amount, setAmount] = useState('');
 
 
     // const [userInput, setUserInput] = useState({
@@ -89,24 +89,35 @@ const ExpenseForm = () => {
             title: title,
             tag: type,
             date: new Date(date),
-            amount: amouunt
+            amount: amount
         }
         console.log(expenseObject);
+        clearHandler();
+    }
+
+
+    const clearHandler = () => {
+        setTitle('');
+        setType('');
+        setDate('');
+        setAmount('');
     }
 
     return (
         <Card className="form_expense">
             <form className="form__body" onSubmit={submitHandler}>
                 <label><h4>Title</h4></label>
-                <input type="text" onChange={titleChangeHandler} />
+                <input type="text" value={title} onChange={titleChangeHandler} />
                 <label><h4>Type</h4></label>
-                <input type="text" onChange={typeChangeHandler} />
+                <input type="text" value={type} onChange={typeChangeHandler} />
                 <label><h4>Date</h4></label>
-                <input type="date" onChange={dateChangeHandler} min="2022-1-1" max="2022-12-31" />
+                <input type="date" value={date} onChange={dateChangeHandler} min="2022-1-1" max="2022-12-31" />
                 <label><h4>Amount</h4></label>
-                <input type="Number" onChange={numberChangeHandler} min="1" max="100000" />
+                <input type="Number" value={amount} onChange={numberChangeHandler} min="1" max="100000" />
                 <div>
-                    <button type="Submit" className="submit submit-black"><h4>Submit</h4></button>
+                    <span> <button type="Submit" className="submit submit-black"><h4>Submit</h4></button></span>
+                    <span> <button type="Clear" onClick={clearHandler} className="clear clear-black"><h4>Clear</h4></button>
+                    </span>
                 </div>
             </form>
         </Card>
