@@ -10,14 +10,14 @@ const Expenses = (props) => {
 
     const filterChangeHandler = (seletedFilter) => {
         setDefaultFilterValue((prevFilter) => seletedFilter);
-        console.log(seletedFilter);
     }
 
     return (
         <Card className="card_expenses">
             <h1>Expenses</h1>
             <ExpenseFilter defaultFilterValue={defaultFilterValue} onChangeFilter={filterChangeHandler}></ExpenseFilter>
-            {props.expenses.map((expense) => (<ExpenseItem key={expense.id} title={expense.title} date={expense.date} tag={expense.tag} amount={expense.amount}></ExpenseItem>))}
+            {props.expenses.filter((expense) => { return expense.date.getFullYear() === Number(defaultFilterValue) })
+                .map((expense) => (<ExpenseItem key={expense.id} title={expense.title} date={expense.date} tag={expense.tag} amount={expense.amount}></ExpenseItem>))}
         </Card >
     );
 }

@@ -12,9 +12,9 @@ const ExpenseFilter = (props) => {
             <label><h4>Filter</h4></label>
             <select value={props.defaultFilterValue} onChange={searchFilter}>
                 <option value="2022">2022</option>
-                <option value="green" >Green</option>
-                <option value="blue" >Blue</option>
-                <option value="yellow" >Yellow</option>
+                <option value="2020" >2020</option>
+                <option value="2019" >2019</option>
+                <option value="2018" >2018</option>
             </select>
         </div>
     );
